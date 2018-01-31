@@ -22,11 +22,11 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         score = intent.getIntExtra("score", score);
         result = new CharSequence[14];
-        wrongAnswers = "You have "+score+" points \nYour wrong answers are: \n";
-        result[0] = "Q1. \\where\\ is not a keyword in java \n";
+        wrongAnswers = "You have " + score + " points \nYour wrong answers are: \n";
+        result[0] = "Q1. \'where\' is not a keyword in java \n";
         result[1] = "Q2. method type of void does nto require a return value\n";
         result[2] = "Q3. Integer.MAX_VALUE + 1 equals Integer.MIN_VALUE\n";
-        result[3] = "Q4. The answer is \\654321\\ if you checked more than 1 or wrong answer you got 0 points :)\n";
+        result[3] = "Q4. The answer is \'654321\' if you checked more than 1 or wrong answer you got 0 points :)\n";
         result[4] = "Q5. True AND false OR false is false\n";
         result[5] = "Q6. Right answer is 2.0\n";
         result[6] = "Q7. Try System.out.println(arrayName instanceof Object); :) \n";
@@ -39,8 +39,8 @@ public class ResultActivity extends AppCompatActivity {
         result[13] = "Q14. Bubble sort :) you can google it, it's interesting :)";
 
         hints = (boolean[]) intent.getSerializableExtra("hints");
-        for (int i=0; i<hints.length; i ++){
-            if (hints[i]==false){
+        for (int i = 0; i < hints.length; i++) {
+            if (hints[i] == false) {
                 wrongAnswers = wrongAnswers + result[i].toString();
             }
         }

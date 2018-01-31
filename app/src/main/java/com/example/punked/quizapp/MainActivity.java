@@ -9,7 +9,8 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private Button start,exit;
+    private Button start, exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         start = (Button) findViewById(R.id.start);
         start.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this,QuizActivity.class);
-            startActivity(intent);
-            finish();
+                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
-
 
 
     }

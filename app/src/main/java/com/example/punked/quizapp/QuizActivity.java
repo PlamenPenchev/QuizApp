@@ -56,31 +56,31 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         //Setting a button to submit the data and send the false answers to next activity
-        submit = (Button)findViewById(R.id.submit);
+        submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                if (q4a1!=null && q4a1.isChecked() ) {
-                    score +=1;
-                    hints[3]=true;
-                }else {
-                    hints[3]=false;
-                }
-                if (q6!=null && ( q6.getText().toString().equals("2.0") || q6.getText().toString().equals(" 2.0 ") ||
-                        q6.getText().toString().equals(" 2.0") || q6.getText().toString().equals("2.0 ") )){
+                if (q4a1 != null && q4a1.isChecked()) {
                     score += 1;
-                    hints[5]=true;
+                    hints[3] = true;
                 } else {
-                    hints[5]=false;
+                    hints[3] = false;
                 }
-                if (q10 !=null && q10.getText().toString().equals("Green == true")){
+                if (q6 != null && (q6.getText().toString().equals("2.0") || q6.getText().toString().equals(" 2.0 ") ||
+                        q6.getText().toString().equals(" 2.0") || q6.getText().toString().equals("2.0 "))) {
                     score += 1;
-                    hints[9]=true;
+                    hints[5] = true;
                 } else {
-                    hints[9]=false;
+                    hints[5] = false;
                 }
-                toast = Toast.makeText(context,"Your score is: "+score,duration);
+                if (q10 != null && q10.getText().toString().equals("Green == true")) {
+                    score += 1;
+                    hints[9] = true;
+                } else {
+                    hints[9] = false;
+                }
+                toast = Toast.makeText(context, "Your score is: " + score, duration);
                 toast.show();//Displaying the score in a toast
-                Intent intent = new Intent(QuizActivity.this,ResultActivity.class);
+                Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                 intent.putExtra("hints", hints); //passing the false answers to next activity
                 intent.putExtra("score", score); // passing the data for the score
                 startActivity(intent);
@@ -107,42 +107,43 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q1a1:
                 if (checked)
                     if (hintsEnabled) {
                         hints[0] = false;
                         toast.show();
                     }
-                    break;
+                break;
             case R.id.q1a2:
                 if (checked)
                     if (hintsEnabled) {
-                    hints[0]=false;
-                    toast.show();
+                        hints[0] = false;
+                        toast.show();
                     }
-                    break;
+                break;
             case R.id.q1a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[0]=false;
+                        hints[0] = false;
                         toast.show();
                     }
-                    break;
+                break;
             case R.id.q1a4:
                 if (checked)
                     score += 1;
-                    hints[0]=true;
-                    break;
+                hints[0] = true;
+                break;
             case R.id.q1a5:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[0]=false;
+                        hints[0] = false;
                         toast.show();
                     }
-                    break;
+                break;
         }
     }
+
     /*
     * Method to check the selected answers for Question 2
     */
@@ -151,32 +152,33 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q2a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[1]=false;
+                        hints[1] = false;
                         toast.show();
                     }
                 break;
             case R.id.q2a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[1]=false;
+                        hints[1] = false;
                         toast.show();
-                    };
+                    }
+                ;
                 break;
             case R.id.q2a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[1]=false;
+                        hints[1] = false;
                         toast.show();
                     }
                 break;
             case R.id.q2a4:
                 if (checked)
                     score += 1;
-                    hints[1]=true;
+                hints[1] = true;
                 break;
 
         }
@@ -190,46 +192,46 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q3a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[2]=false;
+                        hints[2] = false;
                         toast.show();
                     }
                 break;
             case R.id.q3a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[2]=false;
+                        hints[2] = false;
                         toast.show();
                     }
                 break;
             case R.id.q3a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[2]=false;
+                        hints[2] = false;
                         toast.show();
                     }
                 break;
             case R.id.q3a4:
                 if (checked)
                     if (hintsEnabled) {
-                        score +=1;
-                        hints[2]=true;
+                        score += 1;
+                        hints[2] = true;
                     }
                 break;
             case R.id.q3a5:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[2]=false;
+                        hints[2] = false;
                         toast.show();
                     }
                 break;
             case R.id.q3a6:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[2]=false;
+                        hints[2] = false;
                         toast.show();
                     }
                 break;
@@ -245,23 +247,23 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q5a1:
                 if (checked)
                     score += 1;
-                    hints[4]=true;
+                hints[4] = true;
                 break;
             case R.id.q5a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[4]=false;
+                        hints[4] = false;
                         toast.show();
                     }
                 break;
             case R.id.q5a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[4]=false;
+                        hints[4] = false;
                         toast.show();
                     }
                 break;
@@ -277,16 +279,16 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q7a1:
                 if (checked)
-                    score +=1;
-                hints[6]=true;
+                    score += 1;
+                hints[6] = true;
                 break;
             case R.id.q7a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[6]=false;
+                        hints[6] = false;
                         toast.show();
                     }
                 break;
@@ -303,20 +305,19 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q8a1:
                 if (checked)
-                    score +=1;
-                hints[7]=true;
+                    score += 1;
+                hints[7] = true;
                 break;
             case R.id.q8a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[7]=false;
+                        hints[7] = false;
                         toast.show();
                     }
                 break;
-
 
 
         }
@@ -330,11 +331,11 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q9a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[8]=false;
+                        hints[8] = false;
                         toast.show();
                     }
 
@@ -342,12 +343,12 @@ public class QuizActivity extends AppCompatActivity {
             case R.id.q9a2:
                 if (checked)
                     score += 1;
-                hints[8]=true;
+                hints[8] = true;
                 break;
             case R.id.q9a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[8]=false;
+                        hints[8] = false;
                         toast.show();
                     }
                 break;
@@ -363,23 +364,23 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q11a1:
                 if (checked)
                     score += 1;
-                hints[10]=true;
+                hints[10] = true;
                 break;
             case R.id.q11a2:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[10]=false;
+                        hints[10] = false;
                         toast.show();
                     }
                 break;
             case R.id.q11a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[10]=false;
+                        hints[10] = false;
                         toast.show();
                     }
                 break;
@@ -396,11 +397,11 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q12a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[11]=false;
+                        hints[11] = false;
                         toast.show();
                     }
 
@@ -408,12 +409,12 @@ public class QuizActivity extends AppCompatActivity {
             case R.id.q12a2:
                 if (checked)
                     score += 1;
-                hints[11]=true;
+                hints[11] = true;
                 break;
             case R.id.q12a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[11]=false;
+                        hints[11] = false;
                         toast.show();
                     }
                 break;
@@ -429,18 +430,18 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q13a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[12]=false;
+                        hints[12] = false;
                         toast.show();
                     }
                 break;
             case R.id.q13a2:
                 if (checked)
-                    score +=1;
-                hints[12]=true;
+                    score += 1;
+                hints[12] = true;
                 break;
 
 
@@ -455,23 +456,23 @@ public class QuizActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.q14a1:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[13]=false;
+                        hints[13] = false;
                         toast.show();
                     }
                 break;
             case R.id.q14a2:
                 if (checked)
-                    score +=1;
-                hints[13]=true;
+                    score += 1;
+                hints[13] = true;
                 break;
             case R.id.q14a3:
                 if (checked)
                     if (hintsEnabled) {
-                        hints[13]=false;
+                        hints[13] = false;
                         toast.show();
                     }
                 break;
