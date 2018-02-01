@@ -39,9 +39,14 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         context = getApplicationContext();
+        score = 0;
         duration = Toast.LENGTH_SHORT;
         text = "Wrong! Think again :)"; //setting up hint text if the user tap on a wrong answer
         toast = Toast.makeText(context, text, duration);
+        q4a1 = (CheckBox) findViewById(R.id.q4a1);
+        q4a2 = (CheckBox) findViewById(R.id.q4a2);
+        q4a3 = (CheckBox) findViewById(R.id.q4a3);
+        q4a4 = (CheckBox) findViewById(R.id.q4a4);
         q6 = (EditText) findViewById(R.id.q6a1);
         q10 = (EditText) findViewById(R.id.q10a1);
         toggle = (ToggleButton) findViewById(R.id.toggle_hints); //button to activate/deactivate hints
@@ -59,7 +64,7 @@ public class QuizActivity extends AppCompatActivity {
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                if (q4a1 != null && q4a1.isChecked()) {
+                if (q4a1.isChecked() && !q4a2.isChecked() && !q4a3.isChecked() && !q4a4.isChecked() ) {
                     score += 1;
                     hints[3] = true;
                 } else {
@@ -216,10 +221,10 @@ public class QuizActivity extends AppCompatActivity {
                 break;
             case R.id.q3a4:
                 if (checked)
-                    if (hintsEnabled) {
-                        score += 1;
-                        hints[2] = true;
-                    }
+
+                    score += 1;
+                hints[2] = true;
+
                 break;
             case R.id.q3a5:
                 if (checked)

@@ -22,7 +22,7 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         score = intent.getIntExtra("score", score);
         result = new CharSequence[14];
-        wrongAnswers = "You have " + score + " points \nYour wrong answers are: \n";
+        wrongAnswers = "You have " + score + " points \n\nYour wrong answers are: \n";
         result[0] = "Q1. \'where\' is not a keyword in java \n";
         result[1] = "Q2. method type of void does nto require a return value\n";
         result[2] = "Q3. Integer.MAX_VALUE + 1 equals Integer.MIN_VALUE\n";
@@ -32,7 +32,7 @@ public class ResultActivity extends AppCompatActivity {
         result[6] = "Q7. Try System.out.println(arrayName instanceof Object); :) \n";
         result[7] = "Q8. It is true as a Rabbit is a child of LiveStock\n";
         result[8] = "Q9. private String andMe() {}; has no return statement\n";
-        result[9] = "Q10. !IsItGreen will return truw and the first block will be compiled only\n";
+        result[9] = "Q10. !IsItGreen will return true and the first block will be compiled only\n";
         result[10] = "Q11. (false && false)^true will end up true :D\n";
         result[11] = "Q12. The output is random integer from 0 to 10\n";
         result[12] = "Q13. Yes it is a recursion function\n";
