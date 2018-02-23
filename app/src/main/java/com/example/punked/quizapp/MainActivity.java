@@ -9,7 +9,8 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private Button start, exit;
+    private Button start;
+    private Button exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

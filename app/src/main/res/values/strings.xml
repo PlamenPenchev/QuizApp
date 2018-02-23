@@ -19,7 +19,7 @@
     <string name="q1">Which of the following is not a keyword in Java?</string>
     <string name="q2">Which of the following method types does not require a return value?</string>
     <string name="q3">Integer.MAX_VALUE + 1 will return ?</string>
-    <string name="q4">What is the output of the following code?</string>
+    <string name="q4">Which are not the output of the following code?</string>
     <string name="q7">Is int[] j = {0,0,0,1} an instance of an Object?</string>
     <string name="q5">What will be the output of - true &amp;&amp; false || false ?</string>
     <string name="q6">What is the output of :</string>
@@ -41,5 +41,27 @@
     <string name="q141">Create an array and print with random order</string>
     <string name="q142">Create an array, print it and order from lower lower to higher</string>
     <string name="q143">Create an array print it and then swap it backwards</string>
+
+    <string name="toggle_off">Activate Hints</string>
+    <string name="toggle_on">Deactivate Hints</string>
+
+    <string name="toast">Your score is: </string>
+    <string name="toast_wrong">Wrong! Think again :)</string>
+
+    <string name="score_wrong"><b>You have %d points\n Your wrong answers are: \n\n</b></string>
+    <string name="result1">Q1. \'where\' is not a keyword in java </string>
+    <string name="result2">Q2. method type of void does not require a return value</string>
+    <string name="result3">Q3. Integer.MAX_VALUE + 1 equals Integer.MIN_VALUE</string>
+    <string name="result4">Q4. The  wrong answer is "654321", make sure you checked ALL the false outputs :)</string>
+    <string name="result5">Q5. True AND false OR false is false</string>
+    <string name="result6">Q6. Right answer is 2.0</string>
+    <string name="result7">Q7. Try System.out.println(arrayName instanceof Object); :) </string>
+    <string name="result8">Q8. It is true as a Rabbit is a child of LiveStock</string>
+    <string name="result9">Q9. private String andMe() {}; has no return statement</string>
+    <string name="result10">Q10. !IsItGreen will return true and the first block will be compiled only</string>
+    <string name="result11">Q11. (false &amp;&amp; false)^true will end up true :D</string>
+    <string name="result12">Q12. The output is random integer from 0 to 10</string>
+    <string name="result13">Q13. Yes it is a recursion function</string>
+    <string name="result14">Q14. Bubble sort :) you can google it, it\'s interesting :)</string>
 
 </resources>

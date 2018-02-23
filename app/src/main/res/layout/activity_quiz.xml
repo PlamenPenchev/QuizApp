@@ -21,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textOff="Activate Hints"
-            android:textOn="Deactivate Hints" />
+            android:textOff="@string/toggle_off"
+            android:textOn="@string/toggle_on" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="@string/q4"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />

@@ -15,9 +15,13 @@ import android.widget.ToggleButton;
 
 public class QuizActivity extends AppCompatActivity {
 
-    private EditText q6, q10;
-    private CheckBox q4a1, q4a2, q4a3, q4a4;
-    private Button submit, quit;
+    private EditText q6;
+    private EditText q10;
+    private CheckBox q4a2;
+    private CheckBox q4a3;
+    private CheckBox q4a4;
+    private Button submit;
+    private Button quit;
     private int score;
 
     /* Preparing a variable to hold the false answers
@@ -26,7 +30,6 @@ public class QuizActivity extends AppCompatActivity {
       * next activity to give more individual information
       * about every single wrong answer :)*/
     private boolean[] hints = new boolean[14];
-
     private Context context;
     private CharSequence text;
     private int duration;
@@ -41,9 +44,10 @@ public class QuizActivity extends AppCompatActivity {
         context = getApplicationContext();
         score = 0;
         duration = Toast.LENGTH_SHORT;
-        text = "Wrong! Think again :)"; //setting up hint text if the user tap on a wrong answer
+        text = getResources().getString(R.string.toast_wrong);
+
+        //setting up hint text if the user tap on a wrong answer
         toast = Toast.makeText(context, text, duration);
-        q4a1 = (CheckBox) findViewById(R.id.q4a1);
         q4a2 = (CheckBox) findViewById(R.id.q4a2);
         q4a3 = (CheckBox) findViewById(R.id.q4a3);
         q4a4 = (CheckBox) findViewById(R.id.q4a4);
@@ -64,7 +68,7 @@ public class QuizActivity extends AppCompatActivity {
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                if (q4a1.isChecked() && !q4a2.isChecked() && !q4a3.isChecked() && !q4a4.isChecked() ) {
+                if (q4a2.isChecked() && q4a3.isChecked() && q4a4.isChecked()) {
                     score += 1;
                     hints[3] = true;
                 } else {
@@ -83,7 +87,7 @@ public class QuizActivity extends AppCompatActivity {
                 } else {
                     hints[9] = false;
                 }
-                toast = Toast.makeText(context, "Your score is: " + score, duration);
+                toast = Toast.makeText(context, getResources().getString(R.string.toast) + score, duration);
                 toast.show();//Displaying the score in a toast
                 Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                 intent.putExtra("hints", hints); //passing the false answers to next activity
@@ -240,7 +244,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
         }
     }
 
@@ -272,7 +275,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
         }
     }
 
@@ -297,8 +299,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
-
         }
     }
 
@@ -323,8 +323,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
-
         }
     }
 
@@ -343,7 +341,6 @@ public class QuizActivity extends AppCompatActivity {
                         hints[8] = false;
                         toast.show();
                     }
-
                 break;
             case R.id.q9a2:
                 if (checked)
@@ -357,7 +354,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
         }
     }
 
@@ -389,8 +385,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
-
         }
     }
 
@@ -409,7 +403,6 @@ public class QuizActivity extends AppCompatActivity {
                         hints[11] = false;
                         toast.show();
                     }
-
                 break;
             case R.id.q12a2:
                 if (checked)
@@ -423,7 +416,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
         }
     }
 
@@ -448,8 +440,6 @@ public class QuizActivity extends AppCompatActivity {
                     score += 1;
                 hints[12] = true;
                 break;
-
-
         }
     }
 
@@ -481,8 +471,6 @@ public class QuizActivity extends AppCompatActivity {
                         toast.show();
                     }
                 break;
-
-
         }
     }
 
