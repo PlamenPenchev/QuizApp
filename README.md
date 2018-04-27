@@ -8,5 +8,5 @@ which also takes data values from the quiz activity. One holding an array with i
 each false answer and one holding the score. A toast is activated when the activity launches. 
 The user has an option to display the score via button which will also provide an individual information 
 regarding each wrong answered question.
-<a href="https://www.youtube.com/watch?v=7rfV-fO8JqI"><img src="https://i.imgur.com/JcLbWVC.jpg"></img></a>
-<img src="https://i.imgur.com/zK3xiXn.jpg"></img>
+<a href="https://youtu.be/PZa3nqJy2x8"><img src="https://i.imgur.com/lwTmZ8q.jpg"></img></a>
+
